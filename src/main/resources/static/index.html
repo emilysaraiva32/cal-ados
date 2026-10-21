@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rastreabilidade de Calçados</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">RC</div>
+        <div><strong>Rastreabilidade</strong><span>Gestão de calçados</span></div>
+      </div>
+      <div class="nav-label">MENU PRINCIPAL</div>
+      <nav id="navigation">
+        <button class="nav-item active" data-page="dashboard"><span>▦</span> Visão geral</button>
+        <button class="nav-item" data-page="lotes"><span>▤</span> Lotes</button>
+        <button class="nav-item" data-page="movimentacoes"><span>↔</span> Movimentações</button>
+        <button class="nav-item" data-page="bancas"><span>⌂</span> Bancas</button>
+        <button class="nav-item" data-page="modelos"><span>◈</span> Modelos de calçados</button>
+        <button class="nav-item" data-page="usuarios"><span>♙</span> Usuários</button>
+        <button class="nav-item" data-page="excecoes"><span>⚠</span> Exceções e perdas</button>
+        <button class="nav-item" data-page="evidencias"><span>▧</span> Evidências</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="status-dot"></div><div><strong>Sistema local</strong><span>Rastreabilidade de produção</span></div></div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="icon-button mobile-menu" id="menuToggle" aria-label="Abrir menu">☰</button>
+        <div class="breadcrumb"><span>Workspace</span><b>/</b><strong id="crumb">Visão geral</strong></div>
+        <div class="top-actions">
+          <span class="connection-pill" id="connectionState"><i></i> Verificando API...</span>
+          <div class="avatar">AD</div>
+        </div>
+      </header>
+
+      <section class="content">
+        <div id="pageHeader" class="page-header">
+          <div><p class="eyebrow">PAINEL DE CONTROLE</p><h1>Visão geral</h1><p class="subtitle">Acompanhe a produção e a movimentação dos lotes de calçados.</p></div>
+          <button class="primary-button" id="quickAdd">＋ Novo lote</button>
+        </div>
+        <div id="notice" class="notice hidden"></div>
+        <div id="pageContent"></div>
+        <footer>Rastreabilidade de Calçados <span>•</span> Painel administrativo</footer>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="recordDialog" class="record-dialog">
+    <form id="recordForm" method="dialog">
+      <div class="dialog-heading"><div><p class="eyebrow">CADASTRO</p><h2 id="dialogTitle">Novo registro</h2></div><button type="button" class="icon-button" id="closeDialog">✕</button></div>
+      <div id="formFields" class="form-fields"></div>
+      <div class="dialog-actions"><button type="button" class="secondary-button" id="cancelDialog">Cancelar</button><button type="submit" class="primary-button">Salvar registro</button></div>
+    </form>
+  </dialog>
+</body>
+</html>
